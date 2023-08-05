@@ -8,20 +8,18 @@ import { NotFound } from './pages/NotFound';
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <main className='container content'>
-        <Router>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contacts' element={<Contacts />} />
-            <Route path='*' element={<NotFound />} />
-          </Routes>
-        </Router>
+      <main className="container content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </main>
       <Footer />
-    </>
+    </Router>
   );
 }
 
