@@ -1,25 +1,32 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Footer } from './components/Footer';
-import { Header } from './components/Header';
+import {
+  BrowserRouter as Router,
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from 'react-router-dom';
+import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Contacts } from './pages/Contacts.jsx';
 import { NotFound } from './pages/NotFound';
+import { Movie } from './pages/Movie';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Layout />}>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contacts" element={<Contacts />} />
+      <Route path="/movies/:title" element={<Movie />} />
+      <Route path="*" element={<NotFound />} />
+    </Route>
+  )
+);
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <main className="container content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      <Footer />
-    </Router>
+    <RouterProvider router={router} />
   );
 }
 
