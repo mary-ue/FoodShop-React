@@ -33,3 +33,18 @@ nav {
 .card-content {
   flex-grow: 1;
 }
+
+img, iframe { 
+  max-width: 100%;
+}
+
+iframe {
+  width: 600px;
+  height: 350px;
+}
+
+@media (max-width: 600px) {
+  .brand-logo {
+    font-size: 14px;
+  }
+}
