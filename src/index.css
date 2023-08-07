@@ -43,6 +43,39 @@ iframe {
   height: 350px;
 }
 
+.search-input-row {
+  margin-bottom: 10px;
+}
+
+input[type=search]:not(.browser-default) {
+  width: calc(100% - 110px);
+  border-bottom: 1px solid #448aff;
+  transition: all .2s ease-in;
+}
+
+.input-field input[type=search]:focus:not(.browser-default) {
+  border-bottom: 1px solid #82b1ff;
+}
+
+.btn {
+  background-color: #82b1ff;
+}
+
+.btn:hover {
+  background-color: #448aff;
+}
+
+.btn:active, 
+.btn:focus {
+  background-color: #2979ff;
+}
+
+.search-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+}
+
 @media (max-width: 600px) {
   .brand-logo {
     font-size: 14px;
