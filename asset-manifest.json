@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FoodShop-React/static/css/main.91deb9c7.css",
+    "main.js": "/FoodShop-React/static/js/main.89e1b41a.js",
+    "index.html": "/FoodShop-React/index.html",
+    "main.91deb9c7.css.map": "/FoodShop-React/static/css/main.91deb9c7.css.map",
+    "main.89e1b41a.js.map": "/FoodShop-React/static/js/main.89e1b41a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91deb9c7.css",
+    "static/js/main.89e1b41a.js"
+  ]
+}
