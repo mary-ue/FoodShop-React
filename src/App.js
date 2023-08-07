@@ -23,7 +23,9 @@ const router = createBrowserRouter(
       <Route path="/meal/:id" element={<Recipe />} />
       <Route path="*" element={<NotFound />} />
     </Route>
-  )
+  ), {
+    basename: '/FoodShop-React'
+  }
 );
 
 function App() {
